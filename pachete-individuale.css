@@ -1,0 +1,233 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 50px;
+}
+
+.nav-button-a {
+    background-color: #c0392b;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 10px; /* Așează butoanele mai jos */
+}
+
+.nav-button {
+    background-color: #ff703b;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 10px; /* Așează butoanele mai jos */
+}
+
+.nav-button-a:hover {
+    background-color: #c0392b;
+    transform: translateY(-25px); /* Ridică butonul cu 15px la hover */
+}
+
+.nav-button:hover {
+    background-color: #e65c1f;
+    transform: translateY(-25px); /* Ridică butonul cu 15px la hover */
+}
+
+.nav-button .button-text1,
+.nav-button-a .button-text2,
+.nav-button .button-text3,
+.nav-button .button-text4 {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(10px, -50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.nav-button:hover .button-text1,
+.nav-button-a:hover .button-text2,
+.nav-button:hover .button-text3,
+.nav-button:hover .button-text4 {
+    opacity: 1;
+    transform: translate(20px, -50%);
+}
+
+#terms-btn {
+    background-color: #e65c1f; /* Culoare de fundal similară cu butoanele existente */
+    color: #ffffff; /* Culoarea textului */
+    border: none; /* Fără bordură */
+    border-radius: 25px; /* Colțuri rotunjite */
+    padding: 20px 40px; /* Spațiere */
+    font-size: 1.5rem; /* Mărimea fontului */
+    font-weight: bold; /* Greutate font */
+    transition: transform 0.3s, background-color 0.3s; /* Tranziție pentru animație */
+    margin-top: 20px; /* Spațiere de sus */
+}
+
+#terms-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.1); /* Mărire la hover */
+    cursor: pointer; /* Cursor pointer pentru interactivitate */
+}
+
+.welcome-box {
+    background: linear-gradient(135deg, #fe2d2d, #fb4e4e, #fb6464);
+    border: 3px solid #FF4500;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    width: 60%;
+    max-width: 800px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 60px; /* Crește distanța de sus */
+    animation: fadeIn 0.5s ease-in-out; /* Animația de apariție */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+button {
+    background-color: #1f1f1f;
+    color: #F8F8F8;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8b0000;
+}
+
+#launch-info {
+    background: linear-gradient(135deg, #501f1f, #963a3a, #d14747);
+    border: 2px solid #FF4500;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+    max-width: 800px;
+    margin-top: 40px; /* Crește distanța de sus */
+    font-weight: 600;
+    color: #1f1f1f;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Inițial, este ascuns */
+    transform: translateY(-20px); /* Poziția inițială */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Tranziție pentru animație */
+}
+
+#launch-info.show {
+    opacity: 1; /* Fă-l vizibil */
+    transform: translateY(0); /* Revenire la poziția normală */
+    animation: fadeIn 0.5s ease-in-out; /* Animația când devine vizibil */
+}
+
+#launch-info.hide {
+    opacity: 0; /* Fă-l invizibil */
+    transform: translateY(-20px); /* Poziția inițială */
+    animation: fadeOut 0.5s ease-in-out; /* Animația când dispare */
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #610000;
+    text-align: center;
+    color: #F8F8F8;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+p {
+    color: #F8F8F8;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #F8F8F8;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #F8F8F8;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+h3 {
+    color: #F8F8F8;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
