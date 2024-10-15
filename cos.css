@@ -1,0 +1,239 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #080808;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 50px;
+}
+
+.nav-button {
+    background-color: #ff703b;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.nav-button-a {
+    background-color: #c0392b;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px; /* Așează butoanele mai jos */
+}
+
+.nav-button-a:hover {
+    background-color: #c0392b;
+    transform: translateY(-25px); /* Ridică butonul cu 15px la hover */
+}
+
+.nav-button:hover {
+    background-color: #e65c1f;
+    transform: translateY(-25px);
+}
+
+.nav-button .button-text1,
+.nav-button .button-text2,
+.nav-button .button-text3,
+.nav-button-a .button-text4 {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(10px, -50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.nav-button:hover .button-text1,
+.nav-button:hover .button-text2,
+.nav-button:hover .button-text3,
+.nav-button-a:hover .button-text4 {
+    opacity: 1;
+    transform: translate(20px, -50%);
+}
+
+.cart-container {
+    flex-grow: 1;
+    background: linear-gradient(135deg, #fe2d2d, #fb4e4e, #fb6464);
+    border: 3px solid #FF4500;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 60px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Aliniere pe mijloc */
+}
+
+.cart-item {
+    background: linear-gradient(135deg, #501f1f, #963a3a, #d14747);
+    border: 3px solid #C0C0C0 ;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: calc(33% - 20px); /* Trei produse pe rând, cu margini */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.empty-cart-message {
+    color: #F8F8F8;
+    font-size: 1.8rem; /* Ajustat mai mic */
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    font-weight: bold;
+    background-color: #1f1f1f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #8b0000;
+}
+
+footer {
+    margin-top: 100px;
+    width: 100%;
+    background-color: #610000;
+    text-align: center;
+    color: #F8F8F8;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+p {
+    color: #F8F8F8;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #F8F8F8;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #F8F8F8;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+h3 {
+    color: #F8F8F8;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center; /* Aliniere pe verticală */
+    justify-content: center; /* Centrăm orizontal */
+}
+
+.quantity-label {
+    color: #F8F8F8;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-right: 5px; /* Spațiu între text și săgeți */
+}
+
+.quantity-button {
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    font-size: 1.3rem; /* Ajustat pentru a fi mai mic */
+    cursor: pointer;
+    padding: 0 5px; /* Spațiu pe orizontală */
+}
+
+.remove {
+    font-weight: 700;
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.remove:hover {
+    background-color: #8b0000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}

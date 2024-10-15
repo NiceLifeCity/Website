@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pachete Individuale - Bogdan Digital SRL</title>
+    <link rel="stylesheet" href="pachete-individuale.css">
+    <script src="pachete-individuale.js" defer></script>
+</head>
+<body>
+
+	<nav>
+		<button class="nav-button" id="home-btn" onclick="location.href='acasa.html'">🏠 <span class="button-text1">Acasa</span></button>
+		<button class="nav-button-a" id="single-packages-btn" onclick="location.href='pachete-individuale.html'">📦 <span class="button-text2">Pachete Individuale</span></button>
+		<button class="nav-button" id="combined-packages-btn" onclick="location.href='pachete-combinate.html'">📦📦 <span class="button-text3">Pachete Combinate</span></button>
+		<button class="nav-button" id="cart-btn" onclick="location.href='cos.html'">🛒 <span class="button-text4">Cos</span></button>
+	</nav>
+
+    <div class="pachete-individuale">
+        <h1>Pachete Individuale</h1>
+    </div>
+
+    <div class="package-box">
+        <h2>Pachetul 1: "Scriu 3 Cuvinte"</h2>
+        <button class="description-btn" onclick="toggleDescription('desc1')">Descriere</button>
+        <p id="desc1" class="description hidden">Doresti sa transmiti un mesaj special, personalizat, cuvinte care sa conteze? Pachetul "Scriu 3 Cuvinte" este solutia perfecta pentru a adauga un plus de afectiune oricarui moment.</p>
+    </div>
+
+    <div class="packages-group">
+        <div class="package-option">
+            <h3>Pachet Basic</h3>
+            <p>2x "Scriu 3 Cuvinte"</p>
+            <p>Pret -> 20£</p>
+            <p>Discount -> 20% - 16£</p>
+            <button class="buy-btn" data-price="20" onclick="addToCart('Basic - 2x Scriu 3 Cuvinte -> 16£', 20)">Cumpara</button>
+        </div>
+
+        <div class="package-option">
+            <h3>Pachet Standard</h3>
+            <p>4x "Scriu 3 Cuvinte"</p>
+            <p>Pret -> 50£</p>
+            <p>Discount -> 20% - 40£</p>
+            <button class="buy-btn" data-price="50" onclick="addToCart('Standard - 4x Scriu 3 Cuvinte -> 40£', 50)">Cumpara</button>
+        </div>
+
+        <div class="package-option">
+            <h3>Pachet Premium</h3>
+            <p>7x "Scriu 3 Cuvinte"</p>
+            <p>Pret -> 70£</p>
+            <p>Discount -> 20% - 56£</p>
+            <button class="buy-btn" data-price="70" onclick="addToCart('Premium - 7x Scriu 3 Cuvinte -> 56£', 70)">Cumpara</button>
+        </div>
+    </div>
+
+    <div class="package-box">
+        <h2>Pachetul 2: "Spun 3 Cuvinte"</h2>
+        <button class="description-btn" onclick="toggleDescription('desc2')">Descriere</button>
+        <p id="desc2" class="description hidden">Vrei sa auzi vocea care conteaza cel mai mult? "Spun 3 Cuvinte" este despre emotie pura, livrata vocal pentru a aduce zambete si caldura.</p>
+    </div>
+
+    <div class="packages-group">
+        <div class="package-option">
+            <h3>Pachet Basic</h3>
+            <p>2x "Spun 3 Cuvinte"</p>
+            <p>Pret -> 40£</p>
+            <p>Discount -> 20% - 32£</p>
+            <button class="buy-btn" data-price="40" onclick="addToCart('Basic - 2x Spun 3 Cuvinte -> 32£', 40)">Cumpara</button>
+        </div>
+
+        <div class="package-option">
+            <h3>Pachet Standard</h3>
+            <p>3x "Spun 3 Cuvinte"</p>
+            <p>Pret -> 55£</p>
+            <p>Discount -> 20% - 44£</p>
+            <button class="buy-btn" data-price="55" onclick="addToCart('Standard - 3x Spun 3 Cuvinte -> 44£', 55)">Cumpara</button>
+        </div>
+
+        <div class="package-option">
+            <h3>Pachet Premium</h3>
+            <p>5x "Spun 3 Cuvinte"</p>
+            <p>Pret -> 90£</p>
+            <p>Discount -> 20% - 72£</p>
+            <button class="buy-btn" data-price="90" onclick="addToCart('Premium - 5x Spun 3 Cuvinte -> 72£', 90)">Cumpara</button>
+        </div>
+    </div>
+
+    <div class="package-box">
+        <h2>Pachetul 3: "Inregistrez 3 Cuvinte"</h2>
+        <button class="description-btn" onclick="toggleDescription('desc3')">Descriere</button>
+        <p id="desc3" class="description hidden">Pastreaza cuvintele importante pentru totdeauna! "Inregistrez 3 Cuvinte" iti ofera posibilitatea de a crea mesaj audio memorabil, care poate fi ascultat oricand.</p>
+    </div>
+
+    <div class="packages-group">
+        <div class="package-option">
+            <h3>Pachet Premium</h3>
+            <p>1x "Inregistrez 3 Cuvinte"</p>
+            <p>Pret -> 75£</p>
+            <p>Discount -> 20% - 60£</p>
+            <button class="buy-btn" data-price="75" onclick="addToCart('Premium - 1x Inregistrez 3 Cuvinte -> 60£', 75)">Cumpara</button>
+        </div>
+    </div>
+
+    <div class="package-box">
+        <h2>Pachetul 4: "Raspuns la Glume"</h2>
+        <button class="description-btn" onclick="toggleDescription('desc4')">Descriere</button>
+        <p id="desc4" class="description hidden">Adu zambetul pe buzele tuturor cu un raspuns rapid la glume! Pachetul "Raspuns la Glume" este ideal pentru cei care doresc sa adauge putina umor in conversatii.</p>
+    </div>
+
+    <div class="packages-group">
+        <div class="package-option">
+            <h3>Pachet Basic</h3>
+            <p>5x "Raspuns la Glume"</p>
+            <p>Pret -> 35£</p>
+            <p>Discount -> 20% - 28£</p>
+            <button class="buy-btn" data-price="35" onclick="addToCart('Basic - 5x Raspuns la Glume -> 20£', 35)">Cumpara</button>
+        </div>
+
+        <div class="package-option">
+            <h3>Pachet Standard</h3>
+            <p>7x "Raspuns la Glume"</p>
+            <p>Pret -> 45£</p>
+            <p>Discount -> 20% - 36£</p>
+            <button class="buy-btn" data-price="45" onclick="addToCart('Standard - 7x Raspuns la Glume -> 36£', 45)">Cumpara</button>
+        </div>
+
+        <div class="package-option">
+            <h3>Pachet Premium</h3>
+            <p>10x "Raspuns la Glume"</p>
+            <p>Pret -> 60£</p>
+            <p>Discount -> 20% - 48£</p>
+            <button class="buy-btn" data-price="60" onclick="addToCart('Premium - 10x Raspuns la Glume -> 48£', 60)">Cumpara</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bogdan Digital SRL. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>

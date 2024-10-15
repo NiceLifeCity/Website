@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pachete Combinate - Bogdan Digital SRL</title>
+    <link rel="stylesheet" href="pachete-combinate.css">
+    <script src="pachete-combinate.js" defer></script>
+</head>
+<body>
+
+	<nav>
+		<button class="nav-button" id="home-btn" onclick="location.href='acasa.html'">🏠 <span class="button-text1">Acasa</span></button>
+		<button class="nav-button" id="single-packages-btn" onclick="location.href='pachete-individuale.html'">📦 <span class="button-text2">Pachete Individuale</span></button>
+		<button class="nav-button-a" id="combined-packages-btn" onclick="location.href='pachete-combinate.html'">📦📦 <span class="button-text3">Pachete Combinate</span></button>
+		<button class="nav-button" id="cart-btn" onclick="location.href='cos.html'">🛒 <span class="button-text4">Cos</span></button>
+	</nav>
+
+    <div class="pachete-combinate">
+        <h1>Pachete Combinate</h1>
+    </div>
+
+    <div class="package-box">
+        <h2>Pachetul 1: "Scriu 3 cuvinte in combinatie cu raspuns la niste glume"</h2>
+        <button class="description-btn" onclick="toggleDescription('desc1')">Descriere</button>
+        <p id="desc1" class="description hidden">Mixul perfect intre afectiune si umor! Imbina magia cuvintelor cu momentele pline de umor pentru o experienta completa.</p>
+    </div>
+
+    <div class="packages-group">
+        <div class="package-option">
+            <h3>Pachet Basic</h3>
+            <p>2x "Scriu 3 Cuvinte" + 5x "Raspuns la Glume"</p>
+            <p>Pret -> 45£</p>
+            <p>Discount -> 20% - 36£</p>
+            <button class="buy-btn" data-price="45" onclick="addToCart('Basic - 2x Scriu 3 Cuvinte + 5x Raspuns la Glume -> 36£', 45)">Cumpara</button>
+        </div>
+
+        <div class="package-option">
+            <h3>Pachet Standard</h3>
+            <p>4x "Scriu 3 Cuvinte" + 7x "Raspuns la Glume"</p>
+            <p>Pret -> 85£</p>
+            <p>Discount -> 20% - 68£</p>
+            <button class="buy-btn" data-price="85" onclick="addToCart('Standard - 4x Scriu 3 Cuvinte + 7x Raspuns la Glume -> 68£', 85)">Cumpara</button>
+        </div>
+
+        <div class="package-option">
+            <h3>Pachet Premium</h3>
+            <p>7x "Scriu 3 Cuvinte" + 10x "Raspuns la Glume"</p>
+            <p>Pret -> 100£</p>
+            <p>Discount -> 20% - 80£</p>
+            <button class="buy-btn" data-price="100" onclick="addToCart('Premium - 7x Scriu 3 Cuvinte + 10x Raspuns la Glume -> 80£', 100)">Cumpara</button>
+        </div>
+    </div>
+
+    <div class="package-box">
+        <h2>Pachetul 2: "La Alegere"</h2>
+        <button class="description-btn" onclick="toggleDescription('desc2')">Descriere</button>
+        <p id="desc2" class="description hidden">Personalizeaza experienta in functie de nevoile tale!</p>
+    </div>
+
+    <div class="packages-group-c">
+        <div class="package-option-c">
+            <h3>Pachet Custom</h3>
+            <p>Poti sa creezi un pachet unic, adaptat nevoilor tale. Costul suplimentar pentru personalizare va fi discutat in prealabil.</p>
+            <p>Avantaje: Libertatea de a combina orice serviciu pentru a obtine un pachet exact asa cum iti doresti!</p>
+            <p>Pret -> Dupa facerea pachetului</p>
+            <p>Discount -> 20% - Dupa facerea pretului</p>
+            <button class="buy-btn" data-price="1250" onclick="addToCart('Custom - Creaza un pachet unic -> 1000£', 1250)">Cumpara</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bogdan Digital SRL. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>

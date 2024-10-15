@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cos - Bogdan Digital SRL</title>
+    <link rel="stylesheet" href="cos.css">
+    <script src="cos.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <button class="nav-button" id="home-btn" onclick="location.href='acasa.html'">🏠 <span class="button-text1">Acasa</span></button>
+        <button class="nav-button" id="single-packages-btn" onclick="location.href='pachete-individuale.html'">📦 <span class="button-text2">Pachete Individuale</span></button>
+        <button class="nav-button" id="combined-packages-btn" onclick="location.href='pachete-combinate.html'">📦📦 <span class="button-text3">Pachete Combinate</span></button>
+        <button class="nav-button-a" id="cart-btn" onclick="location.href='cos.html'">🛒 <span class="button-text4">Cos</span></button>
+    </nav>
+
+    <div class="cart-container">
+        <h1>Cos de cumparaturi</h1>
+        <div class="cart-items" id="cart-items">
+            <!-- Produsele vor fi generate aici din JavaScript -->
+        </div>
+
+        <div class="cart-summary">
+            <h2 id="total-price">Total: £0</h2>
+            <button class="checkout-btn" onclick="checkout()">Finalizare comanda</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bogdan Digital SRL. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>
